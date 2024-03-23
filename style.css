@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "FormulaOne";
+    src: url("Formula1-Bold.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-image: url("path/to/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: transparent; /* Make the background transparent */
+    
+    padding: 2rem;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+/* Add a semi-transparent background color to the header */
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Transparent black with 80% opacity */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Add a semi-transparent background color to the sections */
+section {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white with 70% opacity */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    font-family: Arial;
+    
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+img.tire-image {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+

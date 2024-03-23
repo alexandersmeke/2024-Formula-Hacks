@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} Weather</title>
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: "FormulaOne";
+            src: url("Formula1-Bold.otf");
+        }
+    </style>
+    <h1 style="font-family: Impact; font-weight: bold; font-size: 50px;">{{ title }} Weather</h1>
+
+    <p style="font-family: Impact; font-size: 40px; font-weight: bold;">{{ temp }}&deg;C </p>
+
+    <p style="font-family: Impact; font-size: 25px;"> {{ status }} </p>
+
+
+    <p style="font-family: Impact; font-size: 25px;"> Feels like {{ feels_like }} &deg;C</p>
+
+    {% if tire_image %}
+    <img src="{{ tire_image }}" alt="{{ tire_type }} tires" class="tire-image">
+    {% endif %}
+
+    <p style="font-family: Impact; font-size: 25px; font-weight: bold;">Suitable Tire Type: {% if tire_type %}{{
+        tire_type }} tires{% endif%}</p>
+
+    <form action="/weather">
+        <input style="font-size: 25px; font-family: Impact;" type="text" name="city" id="city"
+            placeholder="Enter a City" />
+        <button style="font-size: 25px; font-family: Impact;" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

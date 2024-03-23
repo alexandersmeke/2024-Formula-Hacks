@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast F1</title>
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1 style="font-size: 50px; font-family: Impact; font-weight: bold;">Forecast F1</h1>
+    <form action="/weather">
+        <input style="font-size: 25px; font-family: Impact;" type="text" name="city" id="city"
+            placeholder="Enter a City" />
+        <button style="font-size: 25px; font-family: Impact;" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
